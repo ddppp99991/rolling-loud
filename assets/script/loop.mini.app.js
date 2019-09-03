@@ -28,6 +28,12 @@
         });
     }  
 
+    LOOP.prototype.selectMyCreatedGroup = function (callback) {
+        bridge.callHandler('selectMyCreatedGroup','selectMyCreatedGroup',function responseCallback(responseData) {
+            callback(responseData);
+        });
+    }  
+
     function setupWebViewJavascriptBridge(callback) {
         // if (this.window.WebViewJavascriptBridge) { return callback(this.window.WebViewJavascriptBridge); }else {
         //     setTimeout(function () { setupWebViewJavascriptBridge(callback) }, 100)
